@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Ultimate Simplify Downloader",
+  "version": "2.1",
+  "description": "Fetches, zips, and downloads Assessment/Notes PDFs using the Member ID from the URL.",
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://implify.groundgame.health/*",
+    "https://implify.ai/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "download_and_zip": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Download and Zip PDFs"
+    }
+  }
+}

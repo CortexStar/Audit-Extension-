@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Simplify Final Automation",
+  "version": "16.1",
+  "description": "Uses a professional architecture to automate the full UI workflow and provides helper shortcuts.",
+  "permissions": [
+    "storage",
+    "clipboardRead",
+    "scripting",
+    "webNavigation",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://implify.groundgame.health/*",
+    "https://implify.ai/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "start_workflow": {
+      "suggested_key": {
+        "default": "Alt+Shift+F",
+        "mac": "Alt+Shift+F"
+      },
+      "description": "Start Full Workflow from Clipboard"
+    },
+    "go_to_dashboard": {
+      "suggested_key": {
+        "default": "Alt+Shift+H",
+        "mac": "Alt+Shift+H"
+      },
+      "description": "Navigate to the Home Dashboard"
+    }
+  }
+}

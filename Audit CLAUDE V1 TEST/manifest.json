@@ -3,15 +3,13 @@
   "name": "Implify Audit Extension",
   "version": "1.0.0",
   "description": "Automates member data retrieval from Implify platform",
-  "permissions": [
-    "activeTab",
-    "clipboardRead",
-    "downloads"
-  ],
+
+  "permissions": ["activeTab", "clipboardRead", "downloads"],
   "host_permissions": [
     "https://implify.groundgame.health/*",
     "https://implify.ai/*"
   ],
+
   "content_scripts": [
     {
       "matches": [
@@ -22,18 +20,26 @@
       "run_at": "document_end"
     }
   ],
-  "background": {
-    "service_worker": "background.js"
-  },
+
+  "background": { "service_worker": "background.js" },
+
   "commands": {
     "search-member": {
       "suggested_key": {
         "default": "Ctrl+Shift+S",
         "mac": "Command+Shift+S"
       },
-      "description": "Search for member using clipboard ID"
+      "description": "Search for member using clipboard ID and auto-download documents"
+    },
+    "search-member-info": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+I",
+        "mac": "Command+Shift+I"
+      },
+      "description": "Search for member using clipboard ID (no downloads)"
     }
   },
+
   "action": {
     "default_popup": "popup.html",
     "default_title": "Implify Audit Extension"
